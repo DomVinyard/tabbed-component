@@ -1,0 +1,107 @@
+/* Our CSS. I'm afraid I didn't have a great deal of time to spend ordering and structuing the CSS in an attractive or particularly semantic way. I think it's reasonably clean and obvious though. */
+
+body {
+  font-family: georgia, serif;
+  font-size: 0.9em;
+}
+
+/* It's responsive up to a point, and then it's fixed. Does 700 seem about right? */
+#app {
+  max-width: 700px;
+}
+
+#auth {
+  margin-left: 8px;
+}
+
+[type=radio] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+li {
+  padding: 8px 8px 8px 0;
+  border-bottom: 2px solid rgb(246, 244, 239);
+}
+
+li a {
+  color: #333;
+  text-decoration: none;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+   
+.main {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 800px;
+}
+
+.content {
+  background: #fff;
+  color: #373737;
+}
+
+.content > div {
+  display: none;
+  padding: 8px 25px 5px;
+}
+ 
+input(not:#key) {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 6px 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.options {
+  background: black;
+  margin-bottom: 2px;
+  color: white;
+  padding: 8px
+}
+
+.options label {
+  padding: 4px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+input[type=radio] + label {
+  background: rgb(229, 228, 223);
+  cursor: pointer;
+  margin-right: 2px
+}
+
+input[type=radio]:checked + label {
+  background: #fff;
+  cursor: default;
+}
+
+#tab0:checked ~ .content #content0,
+#tab1:checked ~ .content #content1,
+#tab2:checked ~ .content #content2 {
+  display: block;
+}
+
+h1, #instructions {
+  width: 280px;
+  margin-top: 20px;
+}
+
+h1 {
+  margin-bottom: 16px
+}
+
+#go, #key {
+  padding: 8px;
+  font-size: 1.1em;
+}
